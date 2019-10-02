@@ -1,0 +1,3 @@
+[gd_scene format=2]
+
+[node name="Speed_Boost" type="Node2D"]
