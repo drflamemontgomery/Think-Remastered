@@ -8,7 +8,7 @@ var path
 var map
 var map_instance
 
-var level = 6
+var level = 1
 export (int) var num_levels = 7
 
 # Called when the node enters the scene tree for the first time.

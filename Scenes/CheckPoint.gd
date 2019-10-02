@@ -4,6 +4,9 @@ extends Area2D
 # var a = 2
 # var b = "text"
 
+var green_key = false
+var blue_key = false
+
 signal newCheckpoint
 
 # Called when the node enters the scene tree for the first time.
