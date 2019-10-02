@@ -19,4 +19,6 @@ func _process(delta):
 func _on_Key_body_entered(body):
 	if body.is_in_group("Player"):
 		emit_signal("Unlock")
-		queue_free()
+		self.collision_layer = 4
+		self.collision_mask = 4
+		self.hide()

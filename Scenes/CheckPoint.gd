@@ -17,6 +17,6 @@ func _ready():
 
 
 func _on_CheckPoint_body_entered(body):
-	if body.is_in_class("Player"):
+	if body.has_method("die"):
 		$AnimatedSprite.animation = "Active"
 		emit_signal("newCheckpoint")

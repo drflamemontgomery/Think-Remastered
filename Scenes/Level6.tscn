@@ -5,9 +5,9 @@
 [ext_resource path="res://Assets/Tilesets/Key.tres" type="TileSet" id=3]
 [ext_resource path="res://Scenes/Green_Wall.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/CheckPoint.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/CheckPoint.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Teleporter.tscn" type="PackedScene" id=9]
 
 [node name="Level6" type="Area2D"]
@@ -46,106 +46,106 @@ sprite = "Blue"
 [node name="PlayerSpawn" type="Position2D" parent="."]
 position = Vector2( 80, 144 )
 
-[node name="CheckPoint" parent="." instance=ExtResource( 8 )]
-position = Vector2( 142, 427 )
+[node name="CheckPoint" parent="." instance=ExtResource( 6 )]
+position = Vector2( 144, 432 )
 
-[node name="CheckPoint3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 239, 334 )
+[node name="CheckPoint3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 240, 336 )
 
-[node name="CheckPoint2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 592, 1038 )
+[node name="CheckPoint2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 592, 1040 )
 
-[node name="Enemy" parent="." instance=ExtResource( 6 )]
+[node name="Enemy" parent="." instance=ExtResource( 7 )]
 position = Vector2( 336, 142 )
 direction = "left"
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Enemy2" parent="." instance=ExtResource( 6 )]
+[node name="Enemy2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 400, 429 )
 direction = "left"
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Enemy3" parent="." instance=ExtResource( 6 )]
+[node name="Enemy3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 720, 369 )
 direction = "left"
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Enemy4" parent="." instance=ExtResource( 6 )]
+[node name="Enemy4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 272, 590 )
 direction = "left"
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Enemy5" parent="." instance=ExtResource( 6 )]
+[node name="Enemy5" parent="." instance=ExtResource( 7 )]
 position = Vector2( 465, 878 )
 direction = "left"
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Enemy6" parent="." instance=ExtResource( 6 )]
+[node name="Enemy6" parent="." instance=ExtResource( 7 )]
 position = Vector2( 623, 530 )
 direction = "left"
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Enemy7" parent="." instance=ExtResource( 6 )]
+[node name="Enemy7" parent="." instance=ExtResource( 7 )]
 position = Vector2( 687, 1007 )
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Enemy10" parent="." instance=ExtResource( 6 )]
+[node name="Enemy10" parent="." instance=ExtResource( 7 )]
 position = Vector2( 784, 912 )
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Enemy11" parent="." instance=ExtResource( 6 )]
+[node name="Enemy11" parent="." instance=ExtResource( 7 )]
 position = Vector2( 815, 878 )
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Enemy12" parent="." instance=ExtResource( 6 )]
+[node name="Enemy12" parent="." instance=ExtResource( 7 )]
 position = Vector2( 848, 912 )
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Enemy13" parent="." instance=ExtResource( 6 )]
+[node name="Enemy13" parent="." instance=ExtResource( 7 )]
 position = Vector2( 879, 943 )
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Enemy14" parent="." instance=ExtResource( 6 )]
+[node name="Enemy14" parent="." instance=ExtResource( 7 )]
 position = Vector2( 912, 976 )
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Enemy8" parent="." instance=ExtResource( 6 )]
+[node name="Enemy8" parent="." instance=ExtResource( 7 )]
 position = Vector2( 720, 976 )
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Enemy9" parent="." instance=ExtResource( 6 )]
+[node name="Enemy9" parent="." instance=ExtResource( 7 )]
 position = Vector2( 753, 943 )
 offset = 0.1
 move_time = 0.1
 speed = 100
 
-[node name="Player" parent="." instance=ExtResource( 7 )]
+[node name="Player" parent="." instance=ExtResource( 8 )]
 position = Vector2( 114, 129 )
 
 [node name="Teleporter" parent="." instance=ExtResource( 9 )]
@@ -156,4 +156,5 @@ teleport = Vector2( 592, 1040 )
 [connection signal="newCheckpoint" from="CheckPoint" to="." method="_on_CheckPoint_newCheckpoint"]
 [connection signal="newCheckpoint" from="CheckPoint3" to="." method="_on_CheckPoint3_newCheckpoint"]
 [connection signal="newCheckpoint" from="CheckPoint2" to="." method="_on_CheckPoint2_newCheckpoint"]
+[connection signal="respawn" from="Player" to="." method="_on_Player_respawn"]
 [connection signal="retry" from="Player" to="." method="_on_Player_retry"]
