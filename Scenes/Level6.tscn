@@ -77,49 +77,49 @@ position = Vector2( 240, 336 )
 position = Vector2( 592, 1040 )
 
 [node name="Enemy" parent="." instance=ExtResource( 8 )]
-position = Vector2( 336, 142 )
+position = Vector2( 336, 144 )
 direction = "left"
 offset = 0.1
 move_time = 0.1
 speed = 100
 
 [node name="Enemy2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 400, 429 )
+position = Vector2( 400, 432 )
 direction = "left"
 offset = 0.1
 move_time = 0.1
 speed = 100
 
 [node name="Enemy3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 720, 369 )
+position = Vector2( 720, 368 )
 direction = "left"
 offset = 0.1
 move_time = 0.1
 speed = 100
 
 [node name="Enemy4" parent="." instance=ExtResource( 8 )]
-position = Vector2( 272, 590 )
+position = Vector2( 272, 592 )
 direction = "left"
 offset = 0.1
 move_time = 0.1
 speed = 100
 
 [node name="Enemy5" parent="." instance=ExtResource( 8 )]
-position = Vector2( 465, 878 )
+position = Vector2( 464, 880 )
 direction = "left"
 offset = 0.1
 move_time = 0.1
 speed = 100
 
 [node name="Enemy6" parent="." instance=ExtResource( 8 )]
-position = Vector2( 623, 530 )
+position = Vector2( 624, 528 )
 direction = "left"
 offset = 0.1
 move_time = 0.1
 speed = 100
 
 [node name="Enemy7" parent="." instance=ExtResource( 8 )]
-position = Vector2( 687, 1007 )
+position = Vector2( 688, 1008 )
 offset = 0.1
 move_time = 0.1
 speed = 100
@@ -131,7 +131,7 @@ move_time = 0.1
 speed = 100
 
 [node name="Enemy11" parent="." instance=ExtResource( 8 )]
-position = Vector2( 815, 878 )
+position = Vector2( 816, 880 )
 offset = 0.1
 move_time = 0.1
 speed = 100
@@ -143,7 +143,7 @@ move_time = 0.1
 speed = 100
 
 [node name="Enemy13" parent="." instance=ExtResource( 8 )]
-position = Vector2( 879, 943 )
+position = Vector2( 880, 944 )
 offset = 0.1
 move_time = 0.1
 speed = 100
@@ -161,7 +161,7 @@ move_time = 0.1
 speed = 100
 
 [node name="Enemy9" parent="." instance=ExtResource( 8 )]
-position = Vector2( 753, 943 )
+position = Vector2( 752, 944 )
 offset = 0.1
 move_time = 0.1
 speed = 100
