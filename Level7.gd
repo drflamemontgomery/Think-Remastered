@@ -6,6 +6,7 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#$Player/Camera2D/Level_Display/Label.text = "Level: 7"
 	$Player.spawn($PlayerSpawn.position)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

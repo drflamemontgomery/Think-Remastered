@@ -45,14 +45,12 @@ script = ExtResource( 4 )
 
 [node name="Block" parent="." instance=ExtResource( 5 )]
 position = Vector2( 144, 400 )
-collision_layer = 0
-collision_mask = 0
 color = "Blue"
 
 [node name="Block2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 208, 336 )
-collision_layer = 0
-collision_mask = 0
+collision_layer = 31775
+collision_mask = 31775
 color = "Green"
 
 [node name="Green_Key" parent="." instance=ExtResource( 6 )]

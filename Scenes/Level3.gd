@@ -1,6 +1,7 @@
 extends Area2D
 
 func _ready():
+	#$Player/Camera2D/Level_Display/Label.text = "Level: 3"
 	if $Player:
 		$Player.spawn($PlayerSpawn.position)
 	#print_debug($PlayerSpawn.pos)

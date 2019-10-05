@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Level2.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tilesets/Blocks.tres" type="TileSet" id=2]
 [ext_resource path="res://Assets/Tilesets/Key.tres" type="TileSet" id=3]
 [ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://04B_03__.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 6 )
 
 [node name="Level2" type="Area2D"]
 script = ExtResource( 1 )
@@ -29,4 +33,13 @@ position = Vector2( 400.63, 236.501 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 77, 77 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 240.0
+margin_top = 50.0
+margin_right = 456.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 1 )
+text = "COLLECT KEYS TO UNLOCK
+DIFFERENT COLOURED WALLS"
 [connection signal="Unlock" from="Key" to="." method="_on_Key_Unlock"]

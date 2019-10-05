@@ -4,7 +4,10 @@ var pickup_green = false
 var pickup_blue = false
 
 func _ready():
+	$Block.layer_change(1)
+	$Block2.layer_change(1)
 	$PlayerSpawn.position = Vector2(80, 144)
+	#$Player/Camera2D/Level_Display/Label.text = "Level: 6"
 	if $Player:
 		$Player.spawn($PlayerSpawn.position)
 		
@@ -21,15 +24,13 @@ func _on_Player_retry():
 func _on_Blue_Key_Unlock():
 	print_debug("Blue key signal")
 	pickup_blue = true
-	$Block.layer_change(4, 1)
-	$Block.mask_change(4, 1)
+	$Block.layer_change(4)
 	$Block/AnimatedSprite.hide()
 
 func _on_Green_Key_Unlock():
 	print_debug("Green key signal")
 	pickup_green = true
-	$Block2.layer_change(4, 1)
-	$Block2.mask_change(4, 1)
+	$Block2.layer_change(4)
 	$Block2/AnimatedSprite.hide()
 
 
@@ -68,17 +69,15 @@ func _on_CheckPoint2_newCheckpoint():
 func respawn_update():
 	if $Blue_Key:
 		$Blue_Key.collision_layer = 1
-		$Block.layer_change(1, 4)
+		$Block.layer_change(1)
 		$Blue_Key.collision_mask = 1
-		$Block.mask_change(1, 4)
 		$Block/AnimatedSprite.show()
 		$Blue_Key.show()
 		pickup_blue = false
 	if $Green_Key:
 		#$Block2.layer_change(1, 4)
 		#$Block2.mask_change(1, 4)
-		$Green_Key.collision_layer = 1
-		$Green_Key.collision_mask = 1
+		$Block2.layer_change(1)
 		$Block2/AnimatedSprite.show()
 		$Green_Key.show()
 		pickup_green = false

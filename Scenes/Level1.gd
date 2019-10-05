@@ -7,6 +7,7 @@ signal next_level
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Player.spawn($PlayerSpawn.position)
+	#$Player/Camera2D/Level_Display/Label.text = "Level: 1"
 	#print_debug($PlayerSpawn.pos)
 #	pass
 

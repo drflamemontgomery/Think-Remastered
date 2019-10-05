@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tilesets/Background.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Main.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/End Sequence.tscn" type="PackedScene" id=4]
+[ext_resource path="res://yoster-island/yoster.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 5 )
 
 [node name="GameState" type="Node"]
 script = ExtResource( 1 )
@@ -31,4 +35,14 @@ wait_time = 5.0
 one_shot = true
 
 [node name="End Sequence" parent="." instance=ExtResource( 4 )]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 1 )
+text = "Level:"
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

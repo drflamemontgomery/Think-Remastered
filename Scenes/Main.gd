@@ -57,4 +57,3 @@ func next_level(level_num):
 	map = load(path)
 	map_instance = map.instance()
 	add_child(map_instance)
-	print_debug($RayCast2D.cast_to)
